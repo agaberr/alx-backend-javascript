@@ -1,9 +1,11 @@
 export default function createIteratorObject(report) {
-    return (function* _() {
-      for (const department of Object.values(report.allEmployees)) {
-        for (const employee of department) {
-          yield employee;
-        }
+  return (function* _() {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const department of Object.values(report.allEmployees)) {
+      // eslint-disable-next-line no-restricted-syntax
+      for (const employee of department) {
+        yield employee;
       }
-    }());
+    }
+  }());
 }
